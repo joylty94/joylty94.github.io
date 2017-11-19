@@ -1,0 +1,217 @@
+  @charset "utf-8";
+  @import url("normalize.css");
+  @import url("./fonts.css");
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* CSS Reset */
+  
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  ul {
+    list-style: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  /* 본문 스타일 */
+  
+  html {
+    font-size: 10px;
+  }
+  body {
+    font-family: 'Noto Sans Regular', sans-serif;
+    font-size: 1.4rem;
+    color: #181818;
+    background-color: #fff;
+  }
+  /* 링크 스타일 */
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    color: #f00;
+  }
+  /* 숨긴 콘텐츠 */
+  
+  .readable-hidden, .search-heading, legend {
+    /* position: absolute;
+  left: -9999em; */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    /* font-size: 0;
+  line-height: 0; */
+    clip: rect(0, 0, 0, 0)
+  }
+  .header, .main-content, .slogan, .footer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+  }
+  .member {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1px 0;
+    transform: translateX(5px);
+  }
+  .member li {
+    padding: 8px 5px;
+  }
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
+  .main-menu {
+    background-color: #988574;
+    height: 190px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  .main-menu>li {
+    position: relative;
+  }
+  .main-menu li>span {
+    padding: 2px 80px;
+    font-size: 1.7rem;
+    font-family: "Noto Sans Bold";
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  }
+  .sub-menu {
+    position: absolute;
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+    color: rgba(255, 255, 255, 0.9);
+    /* display: none; */
+  }
+  .sub-menu li {
+    padding: 5px 0;
+  }
+  .about-html {
+    left: 90px;
+    top: 30px;
+  }
+  .about-css {
+    left: 90px;
+    top: 30px;
+  }
+  .web {
+    left: 90px;
+    top: 30px;
+  }
+  .qna {
+    left: 90px;
+    top: 30px;
+  }
+  .archive {
+    left: 90px;
+    top: 30px;
+  }
+  .main-content {
+    height: 400px;
+    background-color: skyblue;
+  }
+  .group1 {
+    background-color: red;
+  }
+  .group2 {
+    background-color: violet;
+  }
+  .group3 {
+    background-color: darkkhaki;
+  }
+  .slogan {
+    background-color: darkred;
+  }
+  .footer-bg {
+    background-color: lightsalmon;
+  }
+  .footer {
+    background-color: purple;
+  }
+  @media screen and (max-width:1000px) {
+    .header, .main-content, .slogan, .footer, logo, .search {
+      width: 100%;
+    }
+    .header {
+      background: #38302e;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+    .logo {
+      position: none;
+      background-color: skyblue;
+    }
+    .member {
+      background: #988574;
+      transform: translateX(5px);
+    }
+    .member li {
+      padding: 8px 5px;
+    }
+    .search {
+      position: none;
+      display: block;
+      justify-content: flex-start;
+      background-color: yellow;
+    }
+    .main-menu {
+      background-color: #988574;
+      height: 190px;
+      padding: 25px 0;
+      display: none;
+      justify-content: center;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+    }
+    .main-menu>li {
+      position: relative;
+    }
+    .main-menu li>span {
+      padding: 2px 75px;
+      font-size: 1.9rem;
+      font-family: "Noto Sans Bold";
+      color: #fff;
+      text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+    }
+    .sub-menu {
+      position: absolute;
+      font-size: 1.6rem;
+      font-family: "Noto Sans Bold";
+      color: rgba(255, 255, 255, 0.9);
+      display: none;
+    }
+    .main-content {
+      height: 400%;
+    }
+  }
