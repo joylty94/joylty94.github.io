@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("./normalize.css");
+@import url("normalize.css");
 @import url("./fonts.css");
 *, *::before, *::after {
   box-sizing: border-box;
@@ -48,344 +48,352 @@ a:hover, a:focus {
 /* 숨긴 콘텐츠 */
 
 .readable-hidden, .a11y, legend {
-  /* position: absolute;
-  left: -9999em; */
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   margin: -1px;
-  /* font-size: 0;
-  line-height: 0; */
   clip: rect(0, 0, 0, 0)
 }
 
 /* 공통 스타일 */
 
-.clearfix::after {
+.row-01::after, .row-02::after, .row-03::after, .clearfix::after {
   content: "";
   clear: both;
   display: block;
+}
+
+/* GRID */
+
+.col {
+  float: left;
+}
+.col-1 {
+  width: 120px;
+}
+.col-2 {
+  width: 240px;
+}
+.col-3 {
+  width: 360px;
+}
+.col-4 {
+  width: 480px;
+}
+.col-5 {
+  width: 600px;
+}
+.col-6 {
+  width: 720px;
+}
+.col-7 {
+  width: 840px;
+}
+.col-8 {
+  width: 960px;
+}
+.hei {
+  height: 88px;
 }
 
 /* 레이아웃 설계 */
 
 .container {
   width: 960px;
+  height: 100%;
   margin: 0 auto;
 }
-.header, .main-content-01 p, .ocean figcaption, .main-content-02, .main-content-03, .footer, .btn {
-  margin-left: 120px;
-  width: 960px;
+
+/* row-01 */
+
+.row-01 {
+  background: #fff;
 }
-.header {
-  margin-top: 165px;
-  position: relative;
-}
-.headline {
-  font-size: 4.8rem;
-  width: 480px;
-  height: 152px;
-  line-height: 1.2;
-  font-family: "VarelaRound"
-}
-.headline-content {
-  font-size: 2.3rem;
-  width: 590px;
-  height: 95px;
-  line-height: 1.5;
-  margin-top: 49px;
-  font-style: italic;
-  font-family: "PT-ltalic";
-  text-align: left;
-  color: #868686;
-}
-.headline-content::before {
-  content: "";
-  width: 14px;
-  height: 17px;
-  display: inline-block;
-  background: url("../img/logo.png") no-repeat;
-  margin-left: -43px;
-  margin-right: 29px;
-}
-.header-items {
-  position: absolute;
-  top: -27px;
-  left: 120;
-  width: 719px;
-}
-.item-01 {
-  float: left;
-  font-size: 1.2rem;
-  color: #1f4ba5;
-  font-weight: bold;
-  margin-right: 30px;
-}
-.item-02 {
-  float: left;
-  font-family: "PTSerif";
-  font-size: 12px;
-  font-style: italic;
-  line-height: 1.5;
-  text-align: left;
-  color: #b8b8b8;
-}
-.item-03 {
-  float: right;
-  font-family: "PTSerif";
-  font-weight: normal;
-  font-style: italic;
-  letter-spacing: normal;
-}
-.item-03 em {
-  font-family: "Oswald-regular";
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: right;
-  color: #868686;
-}
-.main-content-01 {
-  margin-top: 40px;
-}
-.ocean-pt {
-  display: block;
-  width: 960px;
+.row-01-style {
   height: 360px;
-}
-.ocean figcaption {
-  height: 89px;
-  font-family: "PT-ltalic";
-  font-size: 1.2rem;
-  color: #b8b8b8;
-  padding-top: 30px;
-}
-.main-content-01 p {
-  width: 713px;
-  height: 197px;
-  font-size: 1.6rem;
-  line-height: 1.88;
-  text-align: left;
-  color: #868686;
-  font-family: "VarelaRound";
-}
-.img-list {
-  display: flex;
-  transform: translateY(57px);
-}
-.img-list figcaption {
-  height: 70px;
-  padding-top: 20px;
-  text-align: center;
-  font-family: "PT-ltalic";
-  font-size: 1.2rem;
-  font-style: italic;
-  line-height: 1.5;
-  color: #b8b8b8;
-  display: block;
-}
-.btn {
-  margin-top: 57px;
-}
-.btn-prev {
-  height: 60px;
-  width: 60px;
-  padding-top: 60px;
-  overflow: hidden;
-  background-image: url("/img/btn-prev.png");
-  background-repeat: no-repeat;
-}
-.btn-next {
-  height: 60px;
-  width: 60px;
-  padding-top: 60px;
-  overflow: hidden;
-  background-image: url("/img/btn-next.png");
-  background-repeat: no-repeat;
-}
-.btn::after {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 14px;
-  margin-left: 30px;
-  margin-bottom: 35px;
-  background: url("/img/4_16.png") no-repeat;
-}
-.main-header {
-  margin-top: 30px;
-  width: 543px;
-  height: 60px;
-  font-family: "VarelaRound";
-  font-size: 28px;
-  text-align: left;
-  color: #222222;
-}
-.main-content-02 {
+  border: 1px solid #dfdfdf;
   position: relative;
 }
-.main-content-02 .p1 {
-  margin-top: 48px;
-  width: 596px;
-  height: 133px;
+.row-01-product {
+  margin-top: 29px;
+  height: 27px;
+  text-align: center;
   font-family: "VarelaRound";
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: left;
-  color: #868686;
-}
-.main-content-02 .p2 {
-  margin-top: 48px;
-  width: 357px;
-  height: 224px;
-  font-family: "PT-ltalic";
-  font-size: 18px;
-  font-style: italic;
-  line-height: 1.6;
-  text-align: left;
-  color: #222222;
-  display: inline-block;
-}
-.p2::before {
-  content: "";
-  width: 14px;
-  height: 12px;
-  display: inline-block;
-  background: url("../img/quotation.png") no-repeat;
-  margin-left: -43px;
-  margin-right: 29px;
-}
-.komol {
-  float: right;
-  margin-top: 48px;
-  padding-right: 420px;
-}
-.komol-img {
-  width: 65px;
-  height: 65px;
-  border-radius: 33px;
-  background: url("/img/komol.png");
-}
-.komol-introduction {
-  margin-top: 17px;
-  width: 120px;
-  font-family: "PT-ltalic";
   font-size: 12px;
-  font-style: italic;
-  line-height: 2;
-  text-align: left;
-  color: #b8b8b8;
-}
-.komol-introduction em {
-  font-family: "VarelaRound";
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: left;
+  line-height: 1.33;
   color: #222222;
-  margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
 }
-.main-content-02 .p3 {
+.row-01-item1 .row-01-product {
+  width: 125px;
+  margin-left: 59px;
+}
+.row-01-item2 .row-01-product {
+  width: 176px;
+  margin-left: 33px;
+}
+.row-01-item3 .row-01-product {
+  width: 144px;
+  margin-left: 51px;
+}
+.row-01-item4 .row-01-product {
+  width: 150px;
+  margin-left: 47px;
+}
+.row-01 .product-01 {
+  margin-top: 49px;
+  margin-left: 45px;
+  width: 150px;
+  height: 150px;
+}
+.dollar1 {
   margin-top: 50px;
-  width: 600px;
-  height: 76px;
-  font-family: "VarelaRound";
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: left;
-  color: #868686;
+  display: block;
+  font-family: "Oswald-bold";
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #222222;
 }
-.main-content-03 {
+.row-01 span {
+  position: relative;
+  bottom: 18px;
+  left: 31px;
+}
+.row-01-style:hover::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* row-02 */
+
+.row-02 {
+  background: #fff;
+  padding: 10px 120px;
+  background: #dfdfdf;
   position: relative;
 }
-.video {
-  margin-top: 46px;
+.row-02-style {
+  height: 120px;
+  padding-top: 30px;
+  padding-left: 120px;
+  background: #fff;
+  /* border: 1px Zsolid #dfdfdf; */
 }
-.video figcaption {
-  height: 75px;
-  width: 600px;
-  padding-top: 20px;
-  text-align: center;
+.row-02 img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+}
+.row-02-item1 img {
+  top: 25px;
+  left: 135px;
+}
+.row-02-item2 img {
+  top: 145px;
+  left: 135px;
+}
+.row-02-item3 img {
+  top: 265px;
+  left: 135px;
+}
+.row-02-item4 img {
+  top: 385px;
+  left: 135px;
+}
+.row-02 .row-02-product {
+  font-family: "VarelaRound";
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: left;
+  color: #222222;
+  margin-left: 15px;
+}
+.row-02-item1 .row-02-product {
+  width: 154px;
+  height: 30px;
+}
+.row-02-item2 .row-02-product {
+  width: 157px;
+  height: 29px;
+}
+.row-02-item3 .row-02-product {
+  width: 148px;
+  height: 29px;
+}
+.row-02-item4 .row-02-product {
+  width: 159px;
+  height: 27px;
+}
+.dollar2 {
+  margin-top: 4px;
+  margin-left: 10px;
+  font-family: "Oswald-bold";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #222222;
+}
+.row-02 span {
+  margin-top: 18px;
+  margin-left: 10px
+}
+.row-02-btn {
+  padding-left: 10px;
+}
+.wishlist {
+  margin-top: 8px;
+  background: #fff;
   font-family: "PT-ltalic";
   font-size: 12px;
   font-style: italic;
   line-height: 1.5;
+  text-align: left;
   color: #b8b8b8;
 }
-.p4 {
-  /* float: left; */
+.wishlist::before {
+  content: "a";
+  height: 14px;
+  width: 17px;
+  padding-top: 14px;
   display: inline-block;
-  width: 266px;
-  font-family: "VarelaRound";
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: left;
-  color: #868686;
-  margin-right: 54px;
+  background: url("../img/플러스.png") no-repeat;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 5px;
 }
-.p4 em {
-  width: 240px;
-  height: 42px;
-  font-family: "VarelaRound";
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: left;
-  color: #222222;
-  margin-bottom: 25px;
-  display: inline-block;
+
+/* row-03 */
+
+.row-03 {
+  background: #fff;
 }
-.p5 {
-  /* float: left; */
-  display: inline-block;
-  vertical-align: top;
-  width: 262px;
-  font-family: "VarelaRound";
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: left;
-  color: #868686;
+.row-03-item-style {
+  height: 240px;
+  padding-top: 30px;
+  border: 1px solid #ececec;
 }
-.p5 em {
-  width: 230px;
-  height: 42px;
-  font-family: "VarelaRound";
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: left;
-  color: #222222;
-  display: inline-block;
-  margin-bottom: 25px;
-}
-.play-btn {
-  position: absolute;
-  top: 207px;
-  left: 60px;
-}
-.time {
-  position: absolute;
-  top: 20px;
-  right: 380px;
-}
-.share {
-  margin-top: 56px;
-}
-.share img {
-  margin-right: 10px;
-}
-.back-icon {
-  margin-top: 41px;
-  float: left;
-  margin-right: 10px;
-}
-.back {
-  margin-top: 43px;
-  width: 73px;
-  height: 13px;
-  float: left;
+.row-03 .row-03-product {
   font-family: "VarelaRound";
   font-size: 12px;
-  line-height: 1.5;
-  text-align: left;
-  color: #1f4ba5;
-  margin-bottom: 43px;
+  line-height: 1.33;
+  text-align: center;
+  color: #222222;
+}
+.row-03-item1 p {
+  width: 112px;
+  height: 29px;
+  margin-left: 66px;
+}
+.row-03-item3 p {
+  width: 142px;
+  height: 29px;
+  margin-left: 50px;
+}
+.row-03-item4 p {
+  width: 110px;
+  height: 29px;
+  margin-left: 66px;
+}
+.row-03-item6 p {
+  width: 135px;
+  height: 28px;
+  margin-left: 52px;
+}
+.row-03-item7 p {
+  width: 106px;
+  height: 29px;
+  margin-left: 68px;
+}
+.row-03 img {
+  width: 100px;
+  height: 100px;
+  margin-left: 70px;
+}
+.row-03 .img30 {
+  margin-top: 11px;
+}
+.row-03 .img11 {
+  margin-top: 30px;
+}
+
+/* 달러 */
+
+.dollar3 {
+  margin-top: 20px;
+  font-family: "Oswald-bold";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #222222;
+}
+
+/* 버튼 */
+
+.size {
+  width: 90px;
+  height: 30px;
+  background: #f6f6f6;
+  border-radius: 15px;
+}
+.size span {
+  color: #868686;
+  font-family: 'PT-ltalic';
+  font-size: 12px;
+  font-style: italic;
+  margin-left: -20px;
+}
+.cart {
+  width: 110px;
+  height: 30px;
+  background-color: #1f4ba5;
+  border-radius: 15px;
+  font-family: 'VarelaRound';
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* hit, sale, new */
+
+.hit {
+  height: 15px;
+  width: 29px;
+  background: url("../img/hit.png") no-repeat;
+  padding-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.sale {
+  width: 34px;
+  height: 15px;
+  background: url("../img/sale.png") no-repeat;
+  padding-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.new {
+  width: 29px;
+  height: 15px;
+  background: url("../img/new.png") no-repeat;
+  padding-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
 }
