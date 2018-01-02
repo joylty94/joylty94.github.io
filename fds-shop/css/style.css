@@ -1,0 +1,399 @@
+@charset "utf-8";
+@import url("normalize.css");
+@import url("./fonts.css");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* CSS Reset */
+
+html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 본문 스타일 */
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Noto Sans Regular', sans-serif;
+  font-size: 1.4rem;
+  color: #181818;
+  background-color: #fff;
+}
+
+/* 링크 스타일 */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #f00;
+}
+
+/* 숨긴 콘텐츠 */
+
+.readable-hidden, .a11y, legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0)
+}
+
+/* 공통 스타일 */
+
+.row-01::after, .row-02::after, .row-03::after, .clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* GRID */
+
+.col {
+  float: left;
+}
+.col-1 {
+  width: 120px;
+}
+.col-2 {
+  width: 240px;
+}
+.col-3 {
+  width: 360px;
+}
+.col-4 {
+  width: 480px;
+}
+.col-5 {
+  width: 600px;
+}
+.col-6 {
+  width: 720px;
+}
+.col-7 {
+  width: 840px;
+}
+.col-8 {
+  width: 960px;
+}
+.hei {
+  height: 88px;
+}
+
+/* 레이아웃 설계 */
+
+.container {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* row-01 */
+
+.row-01 {
+  background: #fff;
+}
+.row-01-style {
+  height: 360px;
+  border: 1px solid #dfdfdf;
+  position: relative;
+}
+.row-01-product {
+  margin-top: 29px;
+  height: 27px;
+  text-align: center;
+  font-family: "VarelaRound";
+  font-size: 12px;
+  line-height: 1.33;
+  color: #222222;
+  position: relative;
+  z-index: 3;
+}
+.row-01-item1 .row-01-product {
+  width: 125px;
+  margin-left: 59px;
+}
+.row-01-item2 .row-01-product {
+  width: 176px;
+  margin-left: 33px;
+}
+.row-01-item3 .row-01-product {
+  width: 144px;
+  margin-left: 51px;
+}
+.row-01-item4 .row-01-product {
+  width: 150px;
+  margin-left: 47px;
+}
+.row-01 .product-01 {
+  margin-top: 49px;
+  margin-left: 45px;
+  width: 150px;
+  height: 150px;
+}
+.dollar1 {
+  margin-top: 50px;
+  display: block;
+  font-family: "Oswald-bold";
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #222222;
+}
+.row-01 span {
+  position: relative;
+  bottom: 18px;
+  left: 31px;
+}
+.row-01-style:hover::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* row-02 */
+
+.row-02 {
+  background: #fff;
+  padding: 10px 120px;
+  background: #dfdfdf;
+  position: relative;
+}
+.row-02-style {
+  height: 120px;
+  padding-top: 30px;
+  padding-left: 120px;
+  background: #fff;
+  /* border: 1px Zsolid #dfdfdf; */
+}
+.row-02 img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+}
+.row-02-item1 img {
+  top: 25px;
+  left: 135px;
+}
+.row-02-item2 img {
+  top: 145px;
+  left: 135px;
+}
+.row-02-item3 img {
+  top: 265px;
+  left: 135px;
+}
+.row-02-item4 img {
+  top: 385px;
+  left: 135px;
+}
+.row-02 .row-02-product {
+  font-family: "VarelaRound";
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: left;
+  color: #222222;
+  margin-left: 15px;
+}
+.row-02-item1 .row-02-product {
+  width: 154px;
+  height: 30px;
+}
+.row-02-item2 .row-02-product {
+  width: 157px;
+  height: 29px;
+}
+.row-02-item3 .row-02-product {
+  width: 148px;
+  height: 29px;
+}
+.row-02-item4 .row-02-product {
+  width: 159px;
+  height: 27px;
+}
+.dollar2 {
+  margin-top: 4px;
+  margin-left: 10px;
+  font-family: "Oswald-bold";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #222222;
+}
+.row-02 span {
+  margin-top: 18px;
+  margin-left: 10px
+}
+.row-02-btn {
+  padding-left: 10px;
+}
+.wishlist {
+  margin-top: 8px;
+  background: #fff;
+  font-family: "PT-ltalic";
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: left;
+  color: #b8b8b8;
+}
+.wishlist::before {
+  content: "a";
+  height: 14px;
+  width: 17px;
+  padding-top: 14px;
+  display: inline-block;
+  background: url("../img/플러스.png") no-repeat;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+/* row-03 */
+
+.row-03 {
+  background: #fff;
+}
+.row-03-item-style {
+  height: 240px;
+  padding-top: 30px;
+  border: 1px solid #ececec;
+}
+.row-03 .row-03-product {
+  font-family: "VarelaRound";
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+  color: #222222;
+}
+.row-03-item1 p {
+  width: 112px;
+  height: 29px;
+  margin-left: 66px;
+}
+.row-03-item3 p {
+  width: 142px;
+  height: 29px;
+  margin-left: 50px;
+}
+.row-03-item4 p {
+  width: 110px;
+  height: 29px;
+  margin-left: 66px;
+}
+.row-03-item6 p {
+  width: 135px;
+  height: 28px;
+  margin-left: 52px;
+}
+.row-03-item7 p {
+  width: 106px;
+  height: 29px;
+  margin-left: 68px;
+}
+.row-03 img {
+  width: 100px;
+  height: 100px;
+  margin-left: 70px;
+}
+.row-03 .img30 {
+  margin-top: 11px;
+}
+.row-03 .img11 {
+  margin-top: 30px;
+}
+
+/* 달러 */
+
+.dollar3 {
+  margin-top: 20px;
+  font-family: "Oswald-bold";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #222222;
+}
+
+/* 버튼 */
+
+.size {
+  width: 90px;
+  height: 30px;
+  background: #f6f6f6;
+  border-radius: 15px;
+}
+.size span {
+  color: #868686;
+  font-family: 'PT-ltalic';
+  font-size: 12px;
+  font-style: italic;
+  margin-left: -20px;
+}
+.cart {
+  width: 110px;
+  height: 30px;
+  background-color: #1f4ba5;
+  border-radius: 15px;
+  font-family: 'VarelaRound';
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* hit, sale, new */
+
+.hit {
+  height: 15px;
+  width: 29px;
+  background: url("../img/hit.png") no-repeat;
+  padding-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.sale {
+  width: 34px;
+  height: 15px;
+  background: url("../img/sale.png") no-repeat;
+  padding-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.new {
+  width: 29px;
+  height: 15px;
+  background: url("../img/new.png") no-repeat;
+  padding-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
