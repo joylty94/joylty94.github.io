@@ -5,14 +5,14 @@ let cnt = 0;
 
 inputEl.addEventListener('keydown', e => {
   if (e.keyCode === 13) {
-    const itemEl = document.createElement('div');
-    itemEl.textContent = inputEl.value;
-    itemEl.classList.add('item')
-    listEl.appendChild(itemEl);
-    inputEl.value = '';
+    todo();
   }
 })
 addButtonEl.addEventListener('click', e => {
+  todo();
+})
+
+function todo() {
   // 추가
   const itemEl = document.createElement('div');
   cnt++
@@ -43,4 +43,4 @@ addButtonEl.addEventListener('click', e => {
   removeButtonEl.addEventListener('click', e => {
     listEl.removeChild(itemEl)
   })
-})
+}

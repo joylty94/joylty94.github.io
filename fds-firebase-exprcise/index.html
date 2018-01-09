@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <button class="login-button">로그인</button>
+  <div class="container">
+    <div class="myDiv">
+      <h1 class="title">My To Do List</h1>
+      <input type="text" id="todo-input" placeholder="Title...">
+      <button id="add-button">add</button>
+    </div>
+    <div id="todo-list"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAPgbCH3urDAbLvWN8NDmZQ2VfwWCZ-II0",
+      authDomain: "fds-firebase-todo0.firebaseapp.com",
+      databaseURL: "https://fds-firebase-todo0.firebaseio.com",
+      projectId: "fds-firebase-todo0",
+      storageBucket: "",
+      messagingSenderId: "558904179919"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
