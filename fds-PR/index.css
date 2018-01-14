@@ -81,18 +81,7 @@ body {
   transform-style: preserve-3d;
   transform-origin: left center;
   box-shadow: 5px 5px 15px 5px #333;
-}
-.front.front-padding {
   border: 1px solid #000;
-  background: #fff;
-}
-.back.back-padding {
-  border: 1px solid #000;
-  background: #fff;
-}
-.front.front-padding2 {
-  border: 1px solid #000;
-  background: #fff;
 }
 .front, .back {
   position: absolute;
@@ -146,10 +135,10 @@ h1 {
   text-align: center;
   height: 17%;
 }
-.page.index {
+.page.active {
   z-index: 1;
 }
-.active {
+.page.flipped {
   transform: rotateY(-180deg);
 }
 .chapter1 {

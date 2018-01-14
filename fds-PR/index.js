@@ -6,10 +6,12 @@ const fClick = document.querySelector('.front-click')
 const bClick = document.querySelector('.back-click')
 const home = document.querySelector('.front-padding2')
 fClick.addEventListener('click', e => {
-  page.classList.add('active')
+  page.classList.add('flipped')
+
   fClick.classList.add('readable-hidden')
 })
 bClick.addEventListener('click', e => {
-  page.classList.remove('active')
+  page.classList.remove('flipped')
+  page.classList.add('active')
   fClick.classList.remove('readable-hidden')
 })
