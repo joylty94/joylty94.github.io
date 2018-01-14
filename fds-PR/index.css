@@ -69,8 +69,8 @@ body {
 .book {
   margin: 5% 5% 5% 50%;
   position: relative;
-  width: 30%;
-  height: 80%;
+  width: 500px;
+  height: 600px;
   perspective: 1500px;
 }
 .page, .page2 {
