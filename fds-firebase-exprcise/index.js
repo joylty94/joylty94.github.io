@@ -43,11 +43,11 @@ loginButton.addEventListener('click', async e => {
       // console.log(todos);  // todos에 할일 객체가 들어있다.
 
       listEl.innerHTML = ''; // list 목록 지우기.
-
-      // 화면 그리기.
+      console.log(todos)
+        // 화면 그리기.
       for (let [todoId, todo] of Object.entries(todos)) { // title과 complete 분해대입, 순환
-        // console.log(todoId)
-        // console.log(todo)
+        console.log(todoId)
+        console.log(todo)
         const todoEl = document.createElement('div');
         todoEl.textContent = todo.title;
         todoEl.classList.add('item')
@@ -79,7 +79,7 @@ loginButton.addEventListener('click', async e => {
         // 수정
         updateButtonEl.addEventListener('click', async e => {
           e.stopPropagation();
-          let updateTitle = prompt('수정할 Title을 입력하시오!!!');
+          let updateTitle = prompt('수정해랏!', `${todo.title}`);
           await firebase.database().ref(`users/${uid}/todos/${todoId}`).update({ title: updateTitle })
           refreshTodos()
         })
