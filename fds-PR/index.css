@@ -54,8 +54,6 @@ a:hover, a:focus {
 
 html {
   height: 100%;
-  overflow: hidden;
-  font-size: 10px;
 }
 body {
   background: #fff;
