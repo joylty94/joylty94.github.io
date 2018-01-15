@@ -34,6 +34,7 @@ loginButton.addEventListener('click', async e => {
     })
   })
   refreshImges()
+
   logoutButton.addEventListener('click', async e => {
     e.stopPropagation();
     firebase.auth().signOut().then(function() {
@@ -41,7 +42,7 @@ loginButton.addEventListener('click', async e => {
     })
     loginButton.classList.remove('readable-hidden')
     logoutButton.classList.add('readable-hidden')
-    refreshWeather();
+    refreshImges()
   })
 })
 
@@ -87,7 +88,7 @@ backButton.addEventListener('click', async e => {
 })
 
 // 로그인 유지
-firebase.auth().onAuthStateChanged(function(user) {
+auth.onAuthStateChanged(function(user) {
   if (user) {
     refreshImges()
   }
