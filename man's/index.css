@@ -131,6 +131,8 @@ a:hover, a:focus {
   }
   .img-list__item {
     margin-top: 5%;
+    width: 360px;
+    height: 300px;
   }
   .img-list__fileName {
     text-align: center;
