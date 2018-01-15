@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Man'sss</h1>
+      <input type="file" class="file-input">
+      <div class="member">
+        <div class="login-button">로그인</div>
+        <div class="logout-button readable-hidden">로그아웃</div>
+        <div class="mypage readable-hidden">마이페이지</div>
+      </div>
+    </header>
+    <nav class="navigation">
+      <ul class="menu-list readable-hidden">
+        <li><a href="#">단체사진</a></li>
+        <li><a href="#">존잘러's</a></li>
+        <li><a href="#">업로드</a></li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <div class="title"></div>
+      <div class="img-list"></div>
+    </main>
+    <footer class="footer">
+      <button class="back-button">이전</button>
+      <button class="next-button">다음</button>
+    </footer>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBxsA7R3rNY9KnW-zlYeqmFwvU1AY3rctY",
+      authDomain: "man-s-d40fc.firebaseapp.com",
+      databaseURL: "https://man-s-d40fc.firebaseio.com",
+      projectId: "man-s-d40fc",
+      storageBucket: "man-s-d40fc.appspot.com",
+      messagingSenderId: "985764704041"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
