@@ -130,7 +130,6 @@ a:hover, a:focus {
     left: 0%;
   }
   .img-list__item {
-    margin-top: 5%;
     width: 360px;
     height: 300px;
   }
@@ -143,10 +142,10 @@ a:hover, a:focus {
     text-align: center;
   }
   .back-button {
-    padding: 5%;
+    padding: 3%;
   }
   .next-button {
-    padding: 5%;
+    padding: 3%;
   }
 }
 @media screen and (min-width:361px) {
@@ -197,7 +196,8 @@ a:hover, a:focus {
     left: 0%;
   }
   .img-list__item {
-    margin-top: 5%;
+    width: 360px;
+    height: 300px;
   }
   .img-list__fileName {
     text-align: center;
