@@ -21,7 +21,7 @@ loginButton.addEventListener('click', async e => {
     console.log(user)
   })
   loginButton.classList.add('readable-hidden')
-  looutButton.classList.remove('readable-hidden')
+  logoutButton.classList.remove('readable-hidden')
   fileInputEl.addEventListener('change', async e => {
     const uid = auth.currentUser.uid;
     console.log(fileInputEl.files[0])

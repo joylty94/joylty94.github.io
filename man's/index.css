@@ -128,6 +128,8 @@ a:hover, a:focus {
     position: absolute;
     bottom: 0%;
     left: 0%;
+    width: 100%;
+    text-align: center;
   }
   .img-list__item {
     width: 360px;
@@ -136,10 +138,6 @@ a:hover, a:focus {
   .img-list__fileName {
     text-align: center;
     font-weight: bold;
-  }
-  .footer {
-    width: 100%;
-    text-align: center;
   }
   .back-button {
     padding: 3%;
