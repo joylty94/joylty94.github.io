@@ -57,7 +57,9 @@ async function refreshImges() {
   const img = snapshot.val()
   const keys = Object.keys(img);
   nextKey = keys[keys.length - 1];
-
+  if (keys.length === 1) {
+    nextKey = undefined
+  }
   imgListEl.innerHTML = '';
 
   const imageArr = Object.entries(img).slice(0, IMAGE_PER_PAGE)
@@ -78,7 +80,9 @@ async function refreshImges() {
 }
 
 nextButton.addEventListener('click', async e => {
-  nextStackKey.push(nextKey)
+  if (nextKey !== 'undefined') {
+    nextStackKey.push(nextKey)
+  }
   refreshImges()
 })
 
@@ -86,6 +90,7 @@ backButton.addEventListener('click', async e => {
   nextStackKey.pop()
   refreshImges()
 })
+
 
 // 로그인 유지
 auth.onAuthStateChanged(function(user) {
